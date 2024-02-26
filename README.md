@@ -170,3 +170,18 @@ YOUR_PATH\AUTO-WCEBLEEDGEN-CHALLENGE-VERSION-V2
     ├───combine_cam_and_predict_result <- *Use --combine parameter*
     └───predict_results
 ```
+## 5. Inference pipeline
+> ⚠️Before run the following command, you DO NOT need to activate any environment.
+
+You can use the following command to make a classification -> instance segmentation -> cam pipeline:
+```bash
+bash -i predict_pipeline.sh
+```
+The results will save in `inference_pipeline`.
+```bash
+YOUR_PATH\AUTO-WCEBLEEDGEN-CHALLENGE-VERSION-V2
+├───classification
+├───inference_pipeline <- *Here*
+├───instance_segmentation
+└───submission files
+```
