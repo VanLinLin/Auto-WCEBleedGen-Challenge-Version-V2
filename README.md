@@ -126,3 +126,14 @@ Once completed, you can find the classificaiton results in `classification/work_
 Also, you can find the visualize image results in `classification/work_dirs/test1_efficientnet-b7_8xb32_in1k_WCE/vis_images` and `classification/work_dirs/test2_efficientnet-b7_8xb32_in1k_WCE/vis_images`.
 
 Similarly, in `instance_segmentation` folder, you can find the visualize results in work_dirs: `instance_segmentation/work_dirs/test1_internimage_xl` and bounding box, segmentation mask json result in `instance_segmentation/work_dirs/test1_internimage_xl/mask_and_bbox_results`.
+
+## 3. Calculate the metrics of instance segmentation
+You can use following command to calculate the ensemble result metrics of instance segmentation:
+```bash
+python instance_segmentation/calculate_instance_seg_metrics.py --result_json [predict bbox or segm json file] --GT_json [ground truth of bbox or segm json file]
+```
+If not specific `--result_json` and `--GT_json` parameters, default will use 
+`--result_json=instance_segmentation/ensemble_results/test1_affirmative.bbox.json` 
+and 
+`--GT_json=instance_segmentation/data/WCEBleedGen_v2/instance_seg_img_test1/coco_annotation/anno_test1.json`
+to calculate the ensemble results.
