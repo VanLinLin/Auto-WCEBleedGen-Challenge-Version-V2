@@ -93,7 +93,7 @@ data = dict(
     test=dict(
         type=dataset_type,
         classes=classes,
-        ann_file=data_root + 'need_to_instance_seg_img_include_misclassification_test1/coco_annotation/need_to_instance_seg_img_include_misclassification_test1.json',
-        img_prefix=data_root +'need_to_instance_seg_img_include_misclassification_test1/Images/',
+        ann_file=data_root + 'instance_seg_img_test1/coco_annotation/anno_test1.json',
+        img_prefix=data_root +'instance_seg_img_test1/Images/',
         pipeline=test_pipeline))
 evaluation = dict(metric=['bbox', 'segm'], classwise=True)

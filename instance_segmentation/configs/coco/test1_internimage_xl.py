@@ -30,9 +30,6 @@ model = dict(
 )
 
 # dataset settings
-dataset_type = 'CocoDataset'
-data_root = 'data/WCEBleedGen_v2/bleeding/'
-classes = ('bleeding',)
 data = dict(samples_per_gpu=20)
 
 optimizer = dict(
