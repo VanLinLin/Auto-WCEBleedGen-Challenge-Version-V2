@@ -57,7 +57,7 @@ Download the testing instance segmentation data from [here](https://drive.google
 Unzip the instance_segmentation_data.zip and instance_segmentation_weight.zip, moving them into instance_segmentation folder.
 
 ```bash
-C:\USERS\USER\DESKTOP\AUTO-WCEBLEEDGEN-CHALLENGE-VERSION-V2\INSTANCE_SEGMENTATION
+YOUR_PATH\AUTO-WCEBLEEDGEN-CHALLENGE-VERSION-V2\INSTANCE_SEGMENTATION
 ├───configs
 │   ├───coco
 │   └───_base_
@@ -162,7 +162,7 @@ Nonetheless, you can also use `--combine` to combine the CAM image and bbox, ins
 
 Folder structure:
 ```bash
-AUTO-WCEBLEEDGEN-CHALLENGE-VERSION-V2
+YOUR_PATH\AUTO-WCEBLEEDGEN-CHALLENGE-VERSION-V2
 ├───classification
 ├───instance_segmentation
 └───internimage_xl_CAM_results <- *Here*
