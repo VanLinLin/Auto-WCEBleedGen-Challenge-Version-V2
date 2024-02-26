@@ -159,3 +159,14 @@ python instance_segmentation/CAM_neck_avg_channel.py
 You can use `--img` to specific one single image or whole image folder, default is `instance_segmentation/data/WCEBleedGen_v2/instance_seg_img_test1/Images`, or can use `--save_path` to setting the save path, default is `internimage_xl_CAM_results`.
 
 Nonetheless, you can also use `--combine` to combine the CAM image and bbox, instance segmentation result.![result](instance_segmentation/resources/combine_A0000.png)
+
+Folder structure:
+```bash
+AUTO-WCEBLEEDGEN-CHALLENGE-VERSION-V2
+├───classification
+├───instance_segmentation
+└───internimage_xl_CAM_results <- *Here*
+    ├───CAM
+    ├───combine_cam_and_predict_result <- *Use --combine parameter*
+    └───predict_results
+```
