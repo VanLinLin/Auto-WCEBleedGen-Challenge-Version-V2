@@ -1,1 +1,4 @@
 classification/work*
+classification/data/*
+classification/weight/*
+*.zip
