@@ -5,7 +5,14 @@
 Run the prepare.sh to auto create the virtual environment for classification and instance segmentation:
 
 ```bash
-bash prepare_env.sh
+bash -i prepare_env.sh
+```
+>⚠️ Since the environment of classification and instance segmentation will be installed separate, the `i` in ```bash bash -i prepare_env.sh``` is necessary.
+
+If the following information appears, means the both environments installation are successful.
+```bash
+Processing dependencies for DCNv3==1.0
+Finished processing dependencies for DCNv3==1.0
 ```
 
 ### 1.1 Classification
@@ -53,7 +60,7 @@ C:\USERS\USER\DESKTOP\AUTO-WCEBLEEDGEN-CHALLENGE-VERSION-V2\INSTANCE_SEGMENTATIO
 │       ├───datasets
 │       ├───models
 │       └───schedules
-├───data<- *From instance_segmentation_data.zip*
+├───data <- *From instance_segmentation_data.zip*
 │   └───WCEBleedGen_v2
 │       ├───instance_seg_img_test1
 │       │   ├───Annotations
@@ -108,3 +115,14 @@ C:\USERS\USER\DESKTOP\AUTO-WCEBLEEDGEN-CHALLENGE-VERSION-V2\INSTANCE_SEGMENTATIO
 ├───tools
 └───weight <- *From instance_segmentation_weight.zip*
 ```
+
+## 2. Inference
+Use the following command to inference, classification and instance segmentation will be done at the same time.
+```bash
+bash -i inference.sh
+```
+Once completed, you can find the classificaiton results in `classification/work_dirs/test1_efficientnet-b7_8xb32_in1k_WCE`, `classification/work_dirs/test2_efficientnet-b7_8xb32_in1k_WCE`, the metrics value can find in `{timestamp}/{timestamp}.json`.
+
+Also, you can find the visualize image results in `classification/work_dirs/test1_efficientnet-b7_8xb32_in1k_WCE/vis_images` and `classification/work_dirs/test2_efficientnet-b7_8xb32_in1k_WCE/vis_images`.
+
+Similarly, in `instance_segmentation` folder, you can find the visualize results in work_dirs: `instance_segmentation/work_dirs/test1_internimage_xl` and bounding box, segmentation mask json result in `instance_segmentation/work_dirs/test1_internimage_xl/mask_and_bbox_results`.
