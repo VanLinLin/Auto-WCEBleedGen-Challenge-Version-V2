@@ -7,7 +7,7 @@ Run the prepare.sh to auto create the virtual environment for classification and
 ```bash
 bash -i prepare_env.sh
 ```
->⚠️ Since the environment of classification and instance segmentation will be installed separate, the `i` in ```bash bash -i prepare_env.sh``` is necessary.
+>⚠️ Since the environment of classification and instance segmentation will be installed separate, the `i` in ```bash -i prepare_env.sh``` is necessary.
 
 If the following information appears, means the both environments installation are successful.
 ```bash
