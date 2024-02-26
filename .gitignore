@@ -2,3 +2,7 @@ classification/work*
 classification/data/*
 classification/weight/*
 *.zip
+
+instance_segmentation/work*
+instance_segmentation/data*
+instance_segmentation/weight/*
