@@ -148,3 +148,14 @@ If not specific `--result_json` and `--GT_json` parameters, default will use
 and
 `--GT_json=instance_segmentation/data/WCEBleedGen_v2/instance_seg_img_test1/coco_annotation/anno_test1.json`
 to calculate the ensemble results.
+
+## 4. CAM
+> ⚠️Before run the following command, you need to activate the `WCE_instance_seg` environment first: `conda activate WCE_instance_seg`
+
+You can use following command to show the CAM(class activation mapping):
+```bash
+python instance_segmentation/CAM_neck_avg_channel.py
+```
+You can use `--img` to specific one single image or whole image folder, default is `instance_segmentation/data/WCEBleedGen_v2/instance_seg_img_test1/Images`, or can use `--save_path` to setting the save path, default is `internimage_xl_CAM_results`.
+
+Nonetheless, you can also use `--combine` to combine the CAM image and bbox, instance segmentation result.![result](instance_segmentation/resources/combine_A0000.png)
